@@ -1,0 +1,35 @@
+<div [className]="app">
+  <rps-container width="40%" rps-container>
+    <rps-selector [isSelected]="elementSelectedByUser === ElementEnum.Scissor">
+      <a [className]="link" (click)="onClick(ElementEnum.Scissor)">
+        <div [className]="svg" rps-scissor></div>
+      </a>
+    </rps-selector>
+    <rps-selector [isSelected]="elementSelectedByUser === ElementEnum.Paper">
+      <a [className]="link" (click)="onClick(ElementEnum.Paper)">
+        <div [className]="svg" rps-paper></div>
+      </a>
+    </rps-selector>
+    <rps-selector [isSelected]="elementSelectedByUser === ElementEnum.Rock">
+      <a [className]="link" (click)="onClick(ElementEnum.Rock)">
+        <div [className]="svg" rps-rock></div>
+      </a>
+    </rps-selector>
+  </rps-container>
+
+  <rps-container width="20%" rps-container>
+    <h2 [className]="text">{{ result }}</h2>
+  </rps-container>
+
+  <rps-container width="40%" rps-container>
+    <rps-selector [isSelected]="elementSelectedByBot === ElementEnum.Scissor">
+      <div [className]="svg" rps-scissor></div>
+    </rps-selector>
+    <rps-selector [isSelected]="elementSelectedByBot === ElementEnum.Paper">
+      <div [className]="svg" rps-paper></div>
+    </rps-selector>
+    <rps-selector [isSelected]="elementSelectedByBot === ElementEnum.Rock">
+      <div [className]="svg" rps-rock></div>
+    </rps-selector>
+  </rps-container>
+</div>
